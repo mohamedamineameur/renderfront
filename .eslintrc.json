@@ -1,0 +1,11 @@
+{
+  "extends": "next/core-web-vitals",
+  "eslintIgnore": [
+    "node_modules/",
+    "dist/",
+    "D:/Developpement/render/frontend/test/node_modules/next/dist/compiled/babel/bundle.js",
+    "D:/Developpement/render/frontend/test/node_modules/next/dist/compiled/babel/eslint-parser.js",
+    "D:/Developpement/render/frontend/test/node_modules/eslint-config-next/parser.js",
+    "D:/Developpement/render/frontend/test/node_modules/@eslint/eslintrc/dist/eslintrc.cjs"
+  ]
+}
