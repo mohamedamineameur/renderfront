@@ -18,7 +18,7 @@ export function LivresEtCouleurs() {
   // Fetch Livres
   const fetchLivres = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/livres');
+      const response = await axios.get('https://renderback-syz4.onrender.com/livres');
       setLivres(response.data);
     } catch (error) {
       setError('Error fetching livres');
@@ -28,7 +28,7 @@ export function LivresEtCouleurs() {
   // Add Livre
   const addLivre = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/livres', { name: nameLivre });
+      const response = await axios.post('https://renderback-syz4.onrender.com/livres', { name: nameLivre });
       setLivres([...livres, response.data]);
       setNameLivre('');
     } catch (error) {
@@ -39,7 +39,7 @@ export function LivresEtCouleurs() {
   // Delete Livre
   const deleteLivre = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/livres/${id}`);
+      await axios.delete(`https://renderback-syz4.onrender.com/livres/${id}`);
       setLivres(livres.filter((livre) => livre.id !== id));
     } catch (error) {
       setError('Error deleting livre');
@@ -49,7 +49,7 @@ export function LivresEtCouleurs() {
   // Fetch Couleurs
   const fetchCouleurs = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/couleurs');
+      const response = await axios.get('https://renderback-syz4.onrender.com/couleurs');
       setCouleurs(response.data);
     } catch (error) {
       setError('Error fetching couleurs');
@@ -59,7 +59,7 @@ export function LivresEtCouleurs() {
   // Add Couleur
   const addCouleur = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/couleurs', { name: nameCouleur });
+      const response = await axios.post('https://renderback-syz4.onrender.com/couleurs', { name: nameCouleur });
       setCouleurs([...couleurs, response.data]);
       setNameCouleur('');
     } catch (error) {
@@ -70,7 +70,7 @@ export function LivresEtCouleurs() {
   // Delete Couleur
   const deleteCouleur = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/couleurs/${id}`);
+      await axios.delete(`https://renderback-syz4.onrender.com/couleurs/${id}`);
       setCouleurs(couleurs.filter((couleur) => couleur.id !== id));
     } catch (error) {
       setError('Error deleting couleur');
